@@ -1,0 +1,18 @@
+Linux/Mac
+Create a build step using “Execute Shell” and copy in the following commands:
+
+#!/bin/bash
+for i in {1..30}; do 
+  echo $i; 
+  sleep 1; 
+done
+
+
+
+Windows
+Create a build step using “Execute Windows batch command” and copy in the following commands:
+
+for /L %%i in (1,1,30) do (
+  @echo %%i
+  @ping localhost -n 2 >NUL
+)

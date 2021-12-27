@@ -1,0 +1,29 @@
+Linux/Mac
+Create a build step using “Execute Shell” and copy in the following commands:
+
+#!/bin/bash
+echo "VERSION NUMBER: $VERSION_NUMBER"
+echo "ENVIRONMENT:    $ENVIRONMENT"
+echo "RUN_TESTS:      $RUN_TESTS"
+echo
+if [ "$RUN_TESTS" = "true" ];
+then
+    echo "Running Tests!";
+else
+    echo "Not Testing!";
+fi
+
+
+
+Windows
+Create a build step using “Execute Windows batch command” and copy in the following commands:
+
+echo "VERSION NUMBER: %VERSION_NUMBER%"
+echo "ENVIRONMENT:    %ENVIRONMENT%"
+echo "RUN_TESTS:      %RUN_TESTS%"
+echo
+if "%RUN_TESTS%"=="true" (
+    echo "Running Tests!"
+) else (
+    echo "Not Testing!"
+)
