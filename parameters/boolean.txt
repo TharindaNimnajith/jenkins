@@ -1,0 +1,24 @@
+Linux, MacOS, or Docker
+Create a build step using "Execute Shell" and copy in the following commands:
+
+#!/bin/bash
+echo "RUN_TESTS = $RUN_TESTS"
+if [ "$RUN_TESTS" = "true" ];
+then
+    echo "RUNNING TESTS!";
+else
+    echo "No tests will be run...";
+fi
+
+
+
+Windows
+Create a build step using "Execute Windows batch command" and copy in the following commands:
+
+@echo OFF
+echo "RUN_TESTS = %RUN_TESTS%"
+if "%RUN_TESTS%"=="true" (
+    echo "RUNNING TESTS!"
+) else (
+    echo "No tests will be run"
+)

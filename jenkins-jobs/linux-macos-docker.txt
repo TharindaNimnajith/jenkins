@@ -1,0 +1,28 @@
+Linux, MacOS, or Docker
+
+
+Create a build step using "Execute Shell".
+
+
+Commands for job 1:
+
+echo "Hello, Jenkins"
+
+
+Commands for job 2:
+
+#!/bin/bash
+for i in {1..30}; do 
+  echo $i; 
+  sleep 1; 
+done
+
+
+Commands for job 3:
+
+#!/bin/bash
+for i in {1..30}; do 
+  echo $i; 
+  sleep 1; 
+done
+exit 1

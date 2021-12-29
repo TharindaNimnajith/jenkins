@@ -1,0 +1,28 @@
+Windows
+
+
+Create a build step using "Execute Windows batch command".
+
+
+Commands for job 1:
+
+echo "Hello, Jenkins"
+
+
+Commands for job 2:
+
+@echo off
+for /L %%i in (1,1,30) do (
+  @echo %%i
+  @ping localhost -n 2 >NUL
+)
+
+
+Commands for job 3:
+
+@echo off
+for /L %%i in (1,1,30) do (
+  @echo %%i
+  @ping localhost -n 2 >NUL
+)
+exit /b 1
